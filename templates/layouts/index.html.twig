@@ -1,0 +1,26 @@
+{% extends "layouts/base.html.twig" %}
+
+{% block title  %} Products {% endblock %}
+
+
+{% block body %}
+    {% if products %}
+        <div class="row">
+
+            {% for product in products %}
+                <div class="card col-md-3 ml-5" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><h2>{{ product.name }}</h2></h5>
+                        <p class="card-text"><p>{{ product.description }}</p></p>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ product.price|format_currency('EUR') }}</h6>
+                        <a href={{ path("product_update", {"id" : product.id})}} class="card-link">Update</a>
+                        <a href="#" class="card-link text-danger">Remove</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h2>No products yet! be the first <a href={{ path("product_create") }}>to upload!</a></h2>
+    {% endif %}
+
+{% endblock %}
