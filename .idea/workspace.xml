@@ -11,16 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2218b593-7d41-41f9-a168-1ef36c8eb78f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/layouts/base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/create_product.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/update_product.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shopping_chart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping_chart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/create_product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/create_product.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/products.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/update_product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/update_product.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +143,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jrwg7guatbGpN7SZNPlHPjki5J" />
@@ -164,7 +170,10 @@
       <option name="presentableId" value="Default" />
       <updated>1604575627404</updated>
       <workItem from="1604575629235" duration="7330000" />
-      <workItem from="1604596320770" duration="3488000" />
+      <workItem from="1604596320770" duration="13948000" />
+      <workItem from="1604682964756" duration="3544000" />
+      <workItem from="1604919971843" duration="1843000" />
+      <workItem from="1604923082508" duration="15445000" />
     </task>
     <servers />
   </component>
@@ -182,5 +191,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604685639377">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604685639377" />
+    <state x="466" y="85" key="NewPhpClassDialog" timestamp="1604683937081">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="466" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604683937081" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604685612073">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604685612073" />
   </component>
 </project>
