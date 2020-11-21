@@ -2,16 +2,20 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\Timestampes;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
+
 class Product
 {
+    use Timestampes;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -80,4 +84,5 @@ class Product
 
         return $this;
     }
+
 }

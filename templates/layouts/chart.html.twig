@@ -1,0 +1,30 @@
+{% extends "layouts/base.html.twig"%}
+
+{% block title %} Chart {% endblock %}
+
+{% block body %}
+    <div class="row" id="chart">
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        let items = JSON.parse(localStorage.getItem('items'));
+        items.forEach((element) => {
+            fetch(`http://localhost:8000/getProductFromChart/${element}`)
+            .then(res => res.json())
+            .then((doc) =>{
+                let node = document.createElement("div");
+                node.classList.add("col-md-3");
+                node.classList.add("ml-5");
+                node.classList.add("card");
+                node.innerHTML = `<div class="card-body">
+                                      <h5 class="card-title">${doc.name}</h5>
+                                      <p class="card-text">${doc.description}</p>
+                                      <h6 class="card-subtitle mb-2 text-muted">${doc.price}</h6>
+                                 </div>`;
+                document.getElementById("chart").appendChild(node);
+            });
+        });
+    </script>
+{% endblock %}

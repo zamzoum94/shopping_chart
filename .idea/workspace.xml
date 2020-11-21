@@ -11,21 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2218b593-7d41-41f9-a168-1ef36c8eb78f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shopping_chart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping_chart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ChartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Traits/Timestampes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/layouts/chart.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/create_product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/create_product.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/products.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/update_product.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/update_product.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/partials/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/products.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/products.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +169,13 @@
       <workItem from="1604682964756" duration="3544000" />
       <workItem from="1604919971843" duration="1843000" />
       <workItem from="1604923082508" duration="15445000" />
+      <workItem from="1605170769206" duration="1540000" />
+      <workItem from="1605782599203" duration="2135000" />
+      <workItem from="1605796767487" duration="2917000" />
+      <workItem from="1605803545715" duration="4476000" />
+      <workItem from="1605808100053" duration="1259000" />
+      <workItem from="1605816516172" duration="2146000" />
+      <workItem from="1605896907418" duration="15458000" />
     </task>
     <servers />
   </component>
@@ -197,10 +199,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604685639377" />
-    <state x="466" y="85" key="NewPhpClassDialog" timestamp="1604683937081">
+    <state x="435" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605805432320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1604683937081" />
+    <state x="435" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605805432320" />
+    <state x="466" y="85" key="NewPhpClassDialog" timestamp="1605808680385">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="466" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1605808680385" />
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1605898019859">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605898019859" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604685612073">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

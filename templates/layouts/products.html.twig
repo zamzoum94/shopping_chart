@@ -5,17 +5,16 @@
 
 {% block body %}
     {% if products %}
-        <div class="row" xmlns="http://www.w3.org/1999/html">
-
+        <div class="row">
             {% for product in products %}
                 <div class="card col-md-3 ml-5" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title"><h2>{{ product.name }}</h2></h5>
-                        <p class="card-text"><p>{{ product.description }}</p></p>
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text"><p>{{ product.description }}</p>
                         <h6 class="card-subtitle mb-2 text-muted">{{ product.price|format_currency('EUR') }}</h6>
-                        <a href={{ path("product_update", {"id" : product.id})}} class="card-link">Update</a>
-                        <a href="#" class="card-link text-danger" id="remove_product_anchor">
-                            Remove</a>
+                        <a href="{{ product.id }}" class="card-link text-success" id="add_to_chart_anchor">Add to chart</a>
+                        <a class="card-link" href={{ path("product_update", {"id" : product.id})}}>Update</a>
+                        <a href="#" class="card-link text-danger" id="remove_product_anchor">Remove</a>
                         <form id="delete_product" action="{{ path('product_delete', {id : product.id}) }}" method="post">
                             <input type="hidden" name="_method" value="DELETE"/>
                         </form>
@@ -34,5 +33,21 @@
             e.preventDefault();
             document.getElementById('delete_product').submit();
         });
+
+        document.getElementById('add_to_chart_anchor').addEventListener('click', (e)=>{
+            e.preventDefault();
+            let path = e.target.pathname;
+            let s = path.split('/');
+            let id = s[s.length - 1];
+            let items = localStorage.getItem('items');
+            if(items){
+                let temp = JSON.parse(localStorage.getItem('items'));
+                temp = [...temp, id];
+                localStorage.setItem('items', JSON.stringify(temp));
+            } else{
+                localStorage.setItem('items', JSON.stringify([id]));
+            }
+        });
+
     </script>
 {% endblock %}

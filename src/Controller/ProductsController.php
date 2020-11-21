@@ -59,12 +59,10 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("/product/update/{id}", name="product_update", methods={"GET", "PUT"})
+     * @Route("/product/update/{id<\d+>}", name="product_update", methods={"GET", "PUT"})
      */
-     public function update(Product $prod,
-                            Request $request) : Response{
+     public function update(Product $prod, Request $request) : Response {
          $form = $this->createForm(FormProduct::class, $prod, ["method" => "PUT"]);
-
          $form->handleRequest($request);
          if($form->isSubmitted()){
              $this->em->flush();
@@ -78,7 +76,7 @@ class ProductsController extends AbstractController
      }
 
     /**
-     * @Route("/product/delete/{id}", name="product_delete", methods={"DELETE"})
+     * @Route("/product/delete/{id<\d+>}", name="product_delete", methods={"DELETE"})
      */
      public function delete(Product $product, Request $request) : Response{
          $this->em->remove($product);
