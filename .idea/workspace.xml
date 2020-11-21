@@ -11,16 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2218b593-7d41-41f9-a168-1ef36c8eb78f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ChartController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Traits/Timestampes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/chart.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/products.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/products.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/chart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/chart.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +167,7 @@
       <workItem from="1605803545715" duration="4476000" />
       <workItem from="1605808100053" duration="1259000" />
       <workItem from="1605816516172" duration="2146000" />
-      <workItem from="1605896907418" duration="15458000" />
+      <workItem from="1605896907418" duration="21824000" />
     </task>
     <servers />
   </component>
@@ -211,6 +203,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1605898019859" />
+    <state x="2143" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605964521197">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2143" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1605964521197" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604685612073">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
