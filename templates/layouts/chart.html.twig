@@ -5,12 +5,32 @@
 {% block body %}
     <div class="row" id="chart">
     </div>
+    <div class="row">
+        <div class="col-md d-flex justify-content-end">
+            <button onclick="purchase()" id="purchase" class="btn btn-success btn-lg" hidden="true">purshase</button>
+        </div>
+    </div>
+    
 {% endblock %}
 
 {% block javascripts %}
     <script>
+        let element = document.getElementById("purchase");
+
+        function checkStorage(){
+            let items = JSON.parse(localStorage.getItem('items'));
+            return items.length > 0 ? true : false;
+        }
+
+        if(checkStorage()){
+            element.hidden = false;
+        } else{
+            element.hidden = true;
+        }
+
+
         let items = JSON.parse(localStorage.getItem('items'));
-        if(items){
+        if(items.length){
             items.forEach((element, index) => {
                 fetch(`http://localhost:8000/getProductFromChart/${element}`)
                 .then(res => res.json())
@@ -41,10 +61,28 @@
                     });
                 });
             });
+        } else {
+            let node = document.createElement('div');
+            node.classList.add("col-md-3");
+            node.classList.add("ml-5");
+            node.innerHTML = `
+                                <p>No items in the chart yet, you can check our products by clicking</p> 
+                                <a href="{{ path('products') }}">here</a>
+                            `;
+            document.getElementById("chart").appendChild(node);                
         }
 
-        let removeFromChart = function(node){
-            console.log(node);
-        }
+        let purchase = function(){
+            let items = localStorage.getItem("items");
+            fetch('http://localhost:8000/order_purchase', {
+                method: "POST",
+                body : items
+            })
+            .then(res => res.json())
+            .then(docs => {
+                localStorage.setItem("items", JSON.stringify([]));
+                location.replace("http://localhost:8000");
+            });   
+        };
     </script>
 {% endblock %}

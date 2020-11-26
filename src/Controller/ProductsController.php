@@ -38,6 +38,11 @@ class ProductsController extends AbstractController
      */
     public function create(Request $request): Response
     {
+        if(!$this->getUser()){
+            $this->addFlash("danger", "You have to be logged in to create!");
+            return $this->redirectToRoute("app_login");
+        }
+
         $product = new Product;
         $form = $this->createFormBuilder($product)
             ->add("name")
@@ -62,26 +67,38 @@ class ProductsController extends AbstractController
      * @Route("/product/update/{id<\d+>}", name="product_update", methods={"GET", "PUT"})
      */
      public function update(Product $prod, Request $request) : Response {
-         $form = $this->createForm(FormProduct::class, $prod, ["method" => "PUT"]);
-         $form->handleRequest($request);
-         if($form->isSubmitted()){
-             $this->em->flush();
-             $this->addFlash("success", "Product succefully Updated");
-             return $this->redirectToRoute("products");
-         }
-         return $this->render('layouts/update_product.html.twig',[
-             "form" => $form->createView(),
-             "product" => $prod
-         ]);
-     }
+        if(!$this->getUser()){
+            $this->addFlash("danger", "You have to be logged in to update!");
+            return $this->redirectToRoute("app_login");
+        }
+
+        $form = $this->createForm(FormProduct::class, $prod, ["method" => "PUT"]);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted()){
+            $this->em->flush();
+            $this->addFlash("success", "Product succefully Updated");
+            return $this->redirectToRoute("products");
+        }
+        return $this->render('layouts/update_product.html.twig',[
+            "form" => $form->createView(),
+            "product" => $prod
+
+        ]);
+    }
 
     /**
      * @Route("/product/delete/{id<\d+>}", name="product_delete", methods={"DELETE"})
      */
      public function delete(Product $product, Request $request) : Response{
-         $this->em->remove($product);
-         $this->em->flush();
-         $this->addFlash("danger", "Product succefully removed");
-         return $this->redirectToRoute("products");
+        if(!$this->getUser()){
+            $this->addFlash("danger", "You have to be logged in to delete!");
+            return $this->redirectToRoute("app_login");
+        }
+
+        $this->em->remove($product);
+        $this->em->flush();
+        $this->addFlash("danger", "Product succefully removed");
+        return $this->redirectToRoute("products");
      }
 }

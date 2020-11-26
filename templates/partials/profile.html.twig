@@ -1,0 +1,32 @@
+{% block body %}
+	<div class="card mb-3">
+        <div class="card-body">
+        	<div class="row">
+            	<div class="col-sm-3">
+                    <h6 class="mb-0">Full Name</h6>
+                </div>
+            <div class="col-sm-9 text-secondary">
+                {{ app.user.firstName }} {{ app.user.lastName }}
+            </div>
+        	</div>
+        	<hr>
+        	<div class="row">
+				<div class="col-sm-3">
+          	  		<h6 class="mb-0">Email</h6>
+          		</div>
+          	<div class="col-sm-9 text-secondary">
+          	  {{ app.user.username }}
+          	</div>
+        	</div>
+        	<hr>
+        	<div class="row">
+        	  	<div class="col-sm-3">
+					<h6 class="mb-0">Orders count</h6>
+          		</div>
+	          	<div class="col-sm-9 text-secondary">
+	          	  {{ app.user.orders.getValues|length}}
+	          	</div>
+        	</div>
+        </div>
+    </div>
+{% endblock %}

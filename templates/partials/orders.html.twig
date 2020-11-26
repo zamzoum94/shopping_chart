@@ -1,0 +1,26 @@
+{% block body %}
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Created at</th>
+          <th scope="col">Updated at</th>
+          <th scope="col">Check</th>
+        </tr>
+      </thead>
+      {% for order in app.user.orders.getValues %}
+      <tbody>
+        <tr>
+          <th scope="row">{{ order.id }}</th>
+          <td>{{ order.updatedAt|date("Y-m-d") }}</td>
+          <td>{{ order.id|date("Y-m-d") }}</td>
+          <td><a class="btn btn-info" href={{ path('app_get_order',{id :order.id})}} role="button">Link</a></td>
+        </tr>
+      </tbody>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+{% block javascripts %}
+    
+{% endblock %}

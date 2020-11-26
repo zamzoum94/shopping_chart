@@ -1,0 +1,36 @@
+{% extends "layouts/base.html.twig"%}
+
+{% block title %}Account{% endblock %}
+
+{% block body %}
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#" id="profile">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" id="orders">Orders</a>
+        </li>
+    </ul>
+    <div id="ordersShow" hidden="true">
+        {% include "partials/orders.html.twig" %}
+    </div>
+    <div id="profileShow">
+        {% include "partials/profile.html.twig" %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        document.getElementById("orders").addEventListener("click", function(event){
+            event.preventDefault();
+            document.getElementById("ordersShow").hidden = false;
+            document.getElementById("profileShow").hidden = true;
+        });
+
+        document.getElementById("profile").addEventListener("click", function(event){
+            event.preventDefault();
+            document.getElementById("profileShow").hidden = false;
+            document.getElementById("ordersShow").hidden = true;
+        });
+    </script>
+{% endblock %}
